@@ -6,6 +6,7 @@ class Movie {
     protected array $genres;
     public $rating;
     public $description;
+    public $posterUrl;
 
     use HasDirector;
 
@@ -19,5 +20,9 @@ class Movie {
     public function getGenresString() {
         $genreNames = array_map(fn($genre) => $genre->getName(), $this->genres);
         return implode(', ', $genreNames);
+    }
+
+    public function getGenres() {
+        return $this->genres;
     }
 }
