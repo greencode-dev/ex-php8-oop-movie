@@ -1,10 +1,12 @@
 <?php
 
-require_once("./traits/HasDirector.php");
-require_once("./models/Genre.php");
-require_once("./models/Movie.php");
+// Importazione delle dipendenze necessarie
+require_once("./Traits/HasDirector.php");
+require_once("./Models/Genre.php");
+require_once("./Models/Movie.php");
 require_once("./db.php");
 
+// Utilizzo del metodo setDirector fornito dal Trait 'HasDirector'
 $movies[0]->setDirector("Christopher Nolan");
 $movies[1]->setDirector("Christopher Nolan");
 $movies[2]->setDirector("Christopher Nolan");
