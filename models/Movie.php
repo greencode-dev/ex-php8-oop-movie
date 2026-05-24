@@ -1,21 +1,22 @@
 <?php
 
 class Movie {
-    public $title;
-    public $year;
+    public string $title;
+    public int $year;
     protected array $genres;
-    public $rating;
-    public $description;
-    public $posterUrl;
+    public float $rating;
+    public string $description = "";
+    public string $posterUrl = "";
 
     use HasDirector;
 
     //Costruttore della classe Movie
-    public function __construct($title, $year, array $genres, $rating,) {
+    public function __construct(string $title, int $year, array $genres, float $rating, string $director) {
         $this->title = $title;
         $this->year = $year;
         $this->genres = $genres;
         $this->rating = $rating;
+        $this->setDirector($director);
     }
 
     //Trasforma l'array di oggetti Genre in una stringa leggibile
@@ -27,7 +28,7 @@ class Movie {
     }
 
     //Restituisce l'array originale di oggetti Genre
-    public function getGenres() {
+    public function getGenres(): array {
         return $this->genres;
     }
 }

@@ -8,12 +8,12 @@ $drama_genre = new Genre("Drama", "Storie profonde e coinvolgenti");
 
 // Creazione del database (mock) dei film come array di oggetti Movie
 $movies = [
-    new Movie("Inception", 2010, [$crime_genre, $action_genre], 8.8),
-    new Movie("The Dark Knight", 2008, [$action_genre], 9.0),
-    new Movie("Interstellar", 2014, [$action_genre, $scifi_genre], 8.6),
-    new Movie("Pulp Fiction", 1994, [$crime_genre], 8.9),
-    new Movie("The Matrix", 1999, [$action_genre, $scifi_genre], 8.7),
-    new Movie("The Godfather", 1972, [$crime_genre, $drama_genre], 9.2)
+    new Movie("Inception", 2010, [$crime_genre, $action_genre], 8.8, "Christopher Nolan"),
+    new Movie("The Dark Knight", 2008, [$action_genre], 9.0, "Christopher Nolan"),
+    new Movie("Interstellar", 2014, [$action_genre, $scifi_genre], 8.6, "Christopher Nolan"),
+    new Movie("Pulp Fiction", 1994, [$crime_genre], 8.9, "Quentin Tarantino"),
+    new Movie("The Matrix", 1999, [$action_genre, $scifi_genre], 8.7, "Lana & Lilly Wachowski"),
+    new Movie("The Godfather", 1972, [$crime_genre, $drama_genre], 9.2, "Francis Ford Coppola")
 ];
 
 // Assegnazione manuale delle descrizioni (proprietà public)

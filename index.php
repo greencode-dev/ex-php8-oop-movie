@@ -6,16 +6,6 @@ require_once("./Models/Genre.php");
 require_once("./Models/Movie.php");
 require_once("./db.php");
 
-// Utilizzo del metodo setDirector fornito dal Trait 'HasDirector'
-$movies[0]->setDirector("Christopher Nolan");
-$movies[1]->setDirector("Christopher Nolan");
-$movies[2]->setDirector("Christopher Nolan");
-$movies[3]->setDirector("Quentin Tarantino");
-$movies[4]->setDirector("Lana & Lilly Wachowski");
-$movies[5]->setDirector("Francis Ford Coppola");
-
-//var_dump($movies);
-
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +50,7 @@ $movies[5]->setDirector("Francis Ford Coppola");
                             <?php echo $movie->year; ?>
                         </small>
                         <p class=" text-muted small">
-                            <?php echo $movie->getDirector() ?? 'N/D'; ?>
+                            <?php echo $movie->getDirector(); ?>
                         </p>
                     </div>
                     <div class="card-body">
