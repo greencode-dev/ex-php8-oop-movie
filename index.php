@@ -63,7 +63,7 @@ require_once("./db.php");
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="flex-grow-1">
                                 <?php foreach ($movie->getGenres() as $genre) { ?>
-                                    <span class="badge rounded-pill bg-info text-dark me-1 mb-0">
+                                    <span class="badge rounded-pill bg-info text-dark me-0.5 mb-0">
                                         <?php echo $genre->getName(); ?>
                                     </span>
                                 <?php } ?>
